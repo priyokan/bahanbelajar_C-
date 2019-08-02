@@ -16,5 +16,41 @@ namespace belajar1
         {
             InitializeComponent();
         }
+        private void load()
+        {
+            txtnewpassword.Text = null;
+            txtoldpassword.Text = null;
+            txtxconfirmpassword.Text = null;
+        }
+
+        DataClasses1DataContext db = new DataClasses1DataContext();
+
+        private void Btnsave_Click(object sender, EventArgs e)
+        {
+            if (txtnewpassword.Text == txtxconfirmpassword.Text)
+            {
+                msemployee employee = new msemployee();
+                employee = db.msemployees.Single(x => x.employeeid == Form1.ID);
+                if(employee.password == txtoldpassword.Text)
+                {
+                    employee.password = txtnewpassword.Text;
+                    db.SubmitChanges();
+                    load();
+                    MessageBox.Show("Success changing password");
+                }
+                else
+                {
+                    MessageBox.Show("Wrong old password");
+                }
+            }
+            else if (txtnewpassword.Text == null || txtoldpassword.Text == null || txtxconfirmpassword == null)
+            {
+                MessageBox.Show("password must be field");
+            }
+            else
+            {
+                MessageBox.Show("Check your confirm password");
+            }
+        }
     }
 }

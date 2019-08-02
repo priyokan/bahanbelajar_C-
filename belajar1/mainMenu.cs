@@ -46,5 +46,11 @@ namespace belajar1
             FrmManageMember manageMember = new FrmManageMember();
             manageMember.Show();
         }
+
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            FrmChangePass changepassword = new FrmChangePass();
+            changepassword.Show();
+        }
     }
 }

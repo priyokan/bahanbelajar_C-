@@ -42,12 +42,6 @@ namespace belajar1
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.CurrentRow;
-            txtid.Text = row.Cells[0].Value.ToString();
-            txtname.Text = row.Cells[1].Value.ToString();
-            txtprice.Text = row.Cells[2].Value.ToString();
-            txtphoto.Text = row.Cells[3].Value.ToString();
-            pictview.ImageLocation = row.Cells[3].Value.ToString();
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -95,6 +89,16 @@ namespace belajar1
             db.msmenus.DeleteOnSubmit(menu);
             db.SubmitChanges();
             load();
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.CurrentRow;
+            txtid.Text = row.Cells[0].Value.ToString();
+            txtname.Text = row.Cells[1].Value.ToString();
+            txtprice.Text = row.Cells[2].Value.ToString();
+            txtphoto.Text = row.Cells[3].Value.ToString();
+            pictview.ImageLocation = row.Cells[3].Value.ToString();
         }
     }
 }

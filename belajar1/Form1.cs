@@ -19,6 +19,7 @@ namespace belajar1
 
         DataClasses1DataContext db = new DataClasses1DataContext();
         public static string name ="";
+        public static int ID = 0;
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -38,6 +39,7 @@ namespace belajar1
             if (login!=null)
             {
                 name = login.name;
+                ID = login.employeeid;
                 if (login.position == "admin")
                 {
                     mainMenu main = new mainMenu();
@@ -65,6 +67,11 @@ namespace belajar1
             {
                 MessageBox.Show("email atau password salah");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -53,11 +53,6 @@ namespace belajar1
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = dataGridView1.CurrentRow;
-            txtid.Text = row.Cells[0].Value.ToString();
-            txtname.Text = row.Cells[1].Value.ToString();
-            txtemail.Text = row.Cells[2].Value.ToString();
-            txthandphone.Text = row.Cells[3].Value.ToString();
         }
 
         private void Btnupdate_Click(object sender, EventArgs e)
@@ -83,6 +78,15 @@ namespace belajar1
         private void Txtemail_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.CurrentRow;
+            txtid.Text = row.Cells[0].Value.ToString();
+            txtname.Text = row.Cells[1].Value.ToString();
+            txtemail.Text = row.Cells[2].Value.ToString();
+            txthandphone.Text = row.Cells[3].Value.ToString();
         }
     }
 }

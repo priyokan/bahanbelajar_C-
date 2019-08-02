@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.menuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.msmenuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.belajar1DataSet2 = new belajar1.belajar1DataSet2();
             this.label1 = new System.Windows.Forms.Label();
             this.pictview = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,17 +50,11 @@
             this.btninsert = new System.Windows.Forms.Button();
             this.btnupdate = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
-            this.belajar1DataSet2 = new belajar1.belajar1DataSet2();
-            this.msmenuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.msmenuTableAdapter = new belajar1.belajar1DataSet2TableAdapters.msmenuTableAdapter();
-            this.menuidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmenuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictview)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -74,7 +74,51 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(482, 213);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // menuidDataGridViewTextBoxColumn
+            // 
+            this.menuidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.menuidDataGridViewTextBoxColumn.DataPropertyName = "menuid";
+            this.menuidDataGridViewTextBoxColumn.HeaderText = "menuid";
+            this.menuidDataGridViewTextBoxColumn.Name = "menuidDataGridViewTextBoxColumn";
+            this.menuidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.menuidDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // photo
+            // 
+            this.photo.DataPropertyName = "photo";
+            this.photo.HeaderText = "photo";
+            this.photo.Name = "photo";
+            this.photo.ReadOnly = true;
+            this.photo.Visible = false;
+            // 
+            // msmenuBindingSource
+            // 
+            this.msmenuBindingSource.DataMember = "msmenu";
+            this.msmenuBindingSource.DataSource = this.belajar1DataSet2;
+            // 
+            // belajar1DataSet2
+            // 
+            this.belajar1DataSet2.DataSetName = "belajar1DataSet2";
+            this.belajar1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -207,52 +251,9 @@
             this.btndelete.UseVisualStyleBackColor = true;
             this.btndelete.Click += new System.EventHandler(this.Btndelete_Click);
             // 
-            // belajar1DataSet2
-            // 
-            this.belajar1DataSet2.DataSetName = "belajar1DataSet2";
-            this.belajar1DataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // msmenuBindingSource
-            // 
-            this.msmenuBindingSource.DataMember = "msmenu";
-            this.msmenuBindingSource.DataSource = this.belajar1DataSet2;
-            // 
             // msmenuTableAdapter
             // 
             this.msmenuTableAdapter.ClearBeforeFill = true;
-            // 
-            // menuidDataGridViewTextBoxColumn
-            // 
-            this.menuidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.menuidDataGridViewTextBoxColumn.DataPropertyName = "menuid";
-            this.menuidDataGridViewTextBoxColumn.HeaderText = "menuid";
-            this.menuidDataGridViewTextBoxColumn.Name = "menuidDataGridViewTextBoxColumn";
-            this.menuidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.menuidDataGridViewTextBoxColumn.Width = 66;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // photo
-            // 
-            this.photo.DataPropertyName = "photo";
-            this.photo.HeaderText = "photo";
-            this.photo.Name = "photo";
-            this.photo.ReadOnly = true;
-            this.photo.Visible = false;
             // 
             // FrmManageMenu
             // 
@@ -278,9 +279,9 @@
             this.Text = "FrmManageMenu";
             this.Load += new System.EventHandler(this.FrmManageMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmenuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictview)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,13 +53,7 @@ namespace belajar1
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow rows = this.dataGridView1.CurrentRow;
-            txtid.Text = rows.Cells[0].Value.ToString();
-            txtname.Text = rows.Cells[1].Value.ToString();
-            txtemail.Text = rows.Cells[2].Value.ToString();
-            txtpassword.Text = rows.Cells[3].Value.ToString();
-            txtHandphone.Text = rows.Cells[4].Value.ToString();
-            comboPosition.Text = rows.Cells[5].Value.ToString();
+           
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -82,6 +76,17 @@ namespace belajar1
             db.msemployees.DeleteOnSubmit(employee);
             db.SubmitChanges();
             load();
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow rows = this.dataGridView1.CurrentRow;
+            txtid.Text = rows.Cells[0].Value.ToString();
+            txtname.Text = rows.Cells[1].Value.ToString();
+            txtemail.Text = rows.Cells[2].Value.ToString();
+            txtpassword.Text = rows.Cells[3].Value.ToString();
+            txtHandphone.Text = rows.Cells[4].Value.ToString();
+            comboPosition.Text = rows.Cells[5].Value.ToString();
         }
     }
 }

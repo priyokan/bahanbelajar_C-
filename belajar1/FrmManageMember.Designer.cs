@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.belajar1DataSet3 = new belajar1.belajar1DataSet3();
-            this.msmemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.msmemberTableAdapter = new belajar1.belajar1DataSet3TableAdapters.msmemberTableAdapter();
             this.memberidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.handphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.joindateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.msmemberBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.belajar1DataSet3 = new belajar1.belajar1DataSet3();
+            this.label1 = new System.Windows.Forms.Label();
+            this.msmemberTableAdapter = new belajar1.belajar1DataSet3TableAdapters.msmemberTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
@@ -52,8 +52,8 @@
             this.btnupdate = new System.Windows.Forms.Button();
             this.btndelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmemberBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -74,32 +74,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(664, 249);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(244, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Form Manage Member";
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
-            // 
-            // belajar1DataSet3
-            // 
-            this.belajar1DataSet3.DataSetName = "belajar1DataSet3";
-            this.belajar1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // msmemberBindingSource
-            // 
-            this.msmemberBindingSource.DataMember = "msmember";
-            this.msmemberBindingSource.DataSource = this.belajar1DataSet3;
-            // 
-            // msmemberTableAdapter
-            // 
-            this.msmemberTableAdapter.ClearBeforeFill = true;
             // 
             // memberidDataGridViewTextBoxColumn
             // 
@@ -141,6 +117,31 @@
             this.joindateDataGridViewTextBoxColumn.HeaderText = "joindate";
             this.joindateDataGridViewTextBoxColumn.Name = "joindateDataGridViewTextBoxColumn";
             this.joindateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // msmemberBindingSource
+            // 
+            this.msmemberBindingSource.DataMember = "msmember";
+            this.msmemberBindingSource.DataSource = this.belajar1DataSet3;
+            // 
+            // belajar1DataSet3
+            // 
+            this.belajar1DataSet3.DataSetName = "belajar1DataSet3";
+            this.belajar1DataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Form Manage Member";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // msmemberTableAdapter
+            // 
+            this.msmemberTableAdapter.ClearBeforeFill = true;
             // 
             // label2
             // 
@@ -270,8 +271,8 @@
             this.Text = "FrmManageMember";
             this.Load += new System.EventHandler(this.FrmManageMember_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msmemberBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

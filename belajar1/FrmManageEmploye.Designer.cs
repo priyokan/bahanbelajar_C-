@@ -30,9 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.belajar1DataSet = new belajar1.belajar1DataSet();
-            this.belajar1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hanphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.msemployeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.belajar1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.belajar1DataSet = new belajar1.belajar1DataSet();
             this.msemployeeTableAdapter = new belajar1.belajar1DataSetTableAdapters.msemployeeTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,19 +53,13 @@
             this.comboPosition = new System.Windows.Forms.ComboBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hanphoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnInstert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.msemployeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -81,22 +81,71 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(712, 197);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // belajar1DataSet
+            // employeeidDataGridViewTextBoxColumn
             // 
-            this.belajar1DataSet.DataSetName = "belajar1DataSet";
-            this.belajar1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.employeeidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.employeeidDataGridViewTextBoxColumn.DataPropertyName = "employeeid";
+            this.employeeidDataGridViewTextBoxColumn.HeaderText = "employeeid";
+            this.employeeidDataGridViewTextBoxColumn.Name = "employeeidDataGridViewTextBoxColumn";
+            this.employeeidDataGridViewTextBoxColumn.ReadOnly = true;
+            this.employeeidDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // password
+            // 
+            this.password.DataPropertyName = "password";
+            this.password.HeaderText = "password";
+            this.password.Name = "password";
+            this.password.ReadOnly = true;
+            // 
+            // hanphoneDataGridViewTextBoxColumn
+            // 
+            this.hanphoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hanphoneDataGridViewTextBoxColumn.DataPropertyName = "hanphone";
+            this.hanphoneDataGridViewTextBoxColumn.HeaderText = "hanphone";
+            this.hanphoneDataGridViewTextBoxColumn.Name = "hanphoneDataGridViewTextBoxColumn";
+            this.hanphoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // positionDataGridViewTextBoxColumn
+            // 
+            this.positionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.positionDataGridViewTextBoxColumn.DataPropertyName = "position";
+            this.positionDataGridViewTextBoxColumn.HeaderText = "position";
+            this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
+            this.positionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // msemployeeBindingSource
+            // 
+            this.msemployeeBindingSource.DataMember = "msemployee";
+            this.msemployeeBindingSource.DataSource = this.belajar1DataSetBindingSource;
             // 
             // belajar1DataSetBindingSource
             // 
             this.belajar1DataSetBindingSource.DataSource = this.belajar1DataSet;
             this.belajar1DataSetBindingSource.Position = 0;
             // 
-            // msemployeeBindingSource
+            // belajar1DataSet
             // 
-            this.msemployeeBindingSource.DataMember = "msemployee";
-            this.msemployeeBindingSource.DataSource = this.belajar1DataSetBindingSource;
+            this.belajar1DataSet.DataSetName = "belajar1DataSet";
+            this.belajar1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // msemployeeTableAdapter
             // 
@@ -216,54 +265,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Password";
             // 
-            // employeeidDataGridViewTextBoxColumn
-            // 
-            this.employeeidDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.employeeidDataGridViewTextBoxColumn.DataPropertyName = "employeeid";
-            this.employeeidDataGridViewTextBoxColumn.HeaderText = "employeeid";
-            this.employeeidDataGridViewTextBoxColumn.Name = "employeeidDataGridViewTextBoxColumn";
-            this.employeeidDataGridViewTextBoxColumn.ReadOnly = true;
-            this.employeeidDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // password
-            // 
-            this.password.DataPropertyName = "password";
-            this.password.HeaderText = "password";
-            this.password.Name = "password";
-            this.password.ReadOnly = true;
-            // 
-            // hanphoneDataGridViewTextBoxColumn
-            // 
-            this.hanphoneDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hanphoneDataGridViewTextBoxColumn.DataPropertyName = "hanphone";
-            this.hanphoneDataGridViewTextBoxColumn.HeaderText = "hanphone";
-            this.hanphoneDataGridViewTextBoxColumn.Name = "hanphoneDataGridViewTextBoxColumn";
-            this.hanphoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // positionDataGridViewTextBoxColumn
-            // 
-            this.positionDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.positionDataGridViewTextBoxColumn.DataPropertyName = "position";
-            this.positionDataGridViewTextBoxColumn.HeaderText = "position";
-            this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
-            this.positionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(317, 439);
@@ -320,9 +321,9 @@
             this.Text = "FrmManageEmploye";
             this.Load += new System.EventHandler(this.FrmManageEmploye_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.msemployeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
