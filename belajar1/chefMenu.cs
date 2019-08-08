@@ -33,5 +33,17 @@ namespace belajar1
             login.Show();
             this.Close();
         }
+
+        private void BtnViewOrder_Click(object sender, EventArgs e)
+        {
+            FrmVIewOreder viewOrder = new FrmVIewOreder();
+            viewOrder.Show();
+        }
+
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            FrmChangePass changePass = new FrmChangePass();
+            changePass.Show();
+        }
     }
 }

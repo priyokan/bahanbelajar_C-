@@ -39,6 +39,12 @@ namespace belajar1
     partial void Insertmsmember(msmember instance);
     partial void Updatemsmember(msmember instance);
     partial void Deletemsmember(msmember instance);
+    partial void Insertdetailorder(detailorder instance);
+    partial void Updatedetailorder(detailorder instance);
+    partial void Deletedetailorder(detailorder instance);
+    partial void Insertheaderorder(headerorder instance);
+    partial void Updateheaderorder(headerorder instance);
+    partial void Deleteheaderorder(headerorder instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -92,6 +98,22 @@ namespace belajar1
 			get
 			{
 				return this.GetTable<msmember>();
+			}
+		}
+		
+		public System.Data.Linq.Table<detailorder> detailorders
+		{
+			get
+			{
+				return this.GetTable<detailorder>();
+			}
+		}
+		
+		public System.Data.Linq.Table<headerorder> headerorders
+		{
+			get
+			{
+				return this.GetTable<headerorder>();
 			}
 		}
 	}
@@ -545,6 +567,418 @@ namespace belajar1
 					this._joindate = value;
 					this.SendPropertyChanged("joindate");
 					this.OnjoindateChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.detailorder")]
+	public partial class detailorder : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _detailid;
+		
+		private int _orderid;
+		
+		private int _menuid;
+		
+		private int _qty;
+		
+		private int _price;
+		
+		private string _status;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OndetailidChanging(int value);
+    partial void OndetailidChanged();
+    partial void OnorderidChanging(int value);
+    partial void OnorderidChanged();
+    partial void OnmenuidChanging(int value);
+    partial void OnmenuidChanged();
+    partial void OnqtyChanging(int value);
+    partial void OnqtyChanged();
+    partial void OnpriceChanging(int value);
+    partial void OnpriceChanged();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
+    #endregion
+		
+		public detailorder()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_detailid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int detailid
+		{
+			get
+			{
+				return this._detailid;
+			}
+			set
+			{
+				if ((this._detailid != value))
+				{
+					this.OndetailidChanging(value);
+					this.SendPropertyChanging();
+					this._detailid = value;
+					this.SendPropertyChanged("detailid");
+					this.OndetailidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderid", DbType="Int NOT NULL")]
+		public int orderid
+		{
+			get
+			{
+				return this._orderid;
+			}
+			set
+			{
+				if ((this._orderid != value))
+				{
+					this.OnorderidChanging(value);
+					this.SendPropertyChanging();
+					this._orderid = value;
+					this.SendPropertyChanged("orderid");
+					this.OnorderidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_menuid", DbType="Int NOT NULL")]
+		public int menuid
+		{
+			get
+			{
+				return this._menuid;
+			}
+			set
+			{
+				if ((this._menuid != value))
+				{
+					this.OnmenuidChanging(value);
+					this.SendPropertyChanging();
+					this._menuid = value;
+					this.SendPropertyChanged("menuid");
+					this.OnmenuidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_qty", DbType="Int NOT NULL")]
+		public int qty
+		{
+			get
+			{
+				return this._qty;
+			}
+			set
+			{
+				if ((this._qty != value))
+				{
+					this.OnqtyChanging(value);
+					this.SendPropertyChanging();
+					this._qty = value;
+					this.SendPropertyChanged("qty");
+					this.OnqtyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_price", DbType="Int NOT NULL")]
+		public int price
+		{
+			get
+			{
+				return this._price;
+			}
+			set
+			{
+				if ((this._price != value))
+				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
+					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.headerorder")]
+	public partial class headerorder : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _orderid;
+		
+		private int _employeeid;
+		
+		private int _memberid;
+		
+		private System.DateTime _date;
+		
+		private string _payment;
+		
+		private string _cardnumber;
+		
+		private string _bank;
+		
+		private System.Nullable<int> _totalPayment;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnorderidChanging(int value);
+    partial void OnorderidChanged();
+    partial void OnemployeeidChanging(int value);
+    partial void OnemployeeidChanged();
+    partial void OnmemberidChanging(int value);
+    partial void OnmemberidChanged();
+    partial void OndateChanging(System.DateTime value);
+    partial void OndateChanged();
+    partial void OnpaymentChanging(string value);
+    partial void OnpaymentChanged();
+    partial void OncardnumberChanging(string value);
+    partial void OncardnumberChanged();
+    partial void OnbankChanging(string value);
+    partial void OnbankChanged();
+    partial void OntotalPaymentChanging(System.Nullable<int> value);
+    partial void OntotalPaymentChanged();
+    #endregion
+		
+		public headerorder()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_orderid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int orderid
+		{
+			get
+			{
+				return this._orderid;
+			}
+			set
+			{
+				if ((this._orderid != value))
+				{
+					this.OnorderidChanging(value);
+					this.SendPropertyChanging();
+					this._orderid = value;
+					this.SendPropertyChanged("orderid");
+					this.OnorderidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_employeeid", DbType="Int NOT NULL")]
+		public int employeeid
+		{
+			get
+			{
+				return this._employeeid;
+			}
+			set
+			{
+				if ((this._employeeid != value))
+				{
+					this.OnemployeeidChanging(value);
+					this.SendPropertyChanging();
+					this._employeeid = value;
+					this.SendPropertyChanged("employeeid");
+					this.OnemployeeidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_memberid", DbType="Int NOT NULL")]
+		public int memberid
+		{
+			get
+			{
+				return this._memberid;
+			}
+			set
+			{
+				if ((this._memberid != value))
+				{
+					this.OnmemberidChanging(value);
+					this.SendPropertyChanging();
+					this._memberid = value;
+					this.SendPropertyChanged("memberid");
+					this.OnmemberidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_date", DbType="Date NOT NULL")]
+		public System.DateTime date
+		{
+			get
+			{
+				return this._date;
+			}
+			set
+			{
+				if ((this._date != value))
+				{
+					this.OndateChanging(value);
+					this.SendPropertyChanging();
+					this._date = value;
+					this.SendPropertyChanged("date");
+					this.OndateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_payment", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string payment
+		{
+			get
+			{
+				return this._payment;
+			}
+			set
+			{
+				if ((this._payment != value))
+				{
+					this.OnpaymentChanging(value);
+					this.SendPropertyChanging();
+					this._payment = value;
+					this.SendPropertyChanged("payment");
+					this.OnpaymentChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cardnumber", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string cardnumber
+		{
+			get
+			{
+				return this._cardnumber;
+			}
+			set
+			{
+				if ((this._cardnumber != value))
+				{
+					this.OncardnumberChanging(value);
+					this.SendPropertyChanging();
+					this._cardnumber = value;
+					this.SendPropertyChanged("cardnumber");
+					this.OncardnumberChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_bank", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string bank
+		{
+			get
+			{
+				return this._bank;
+			}
+			set
+			{
+				if ((this._bank != value))
+				{
+					this.OnbankChanging(value);
+					this.SendPropertyChanging();
+					this._bank = value;
+					this.SendPropertyChanged("bank");
+					this.OnbankChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalPayment", DbType="Int")]
+		public System.Nullable<int> totalPayment
+		{
+			get
+			{
+				return this._totalPayment;
+			}
+			set
+			{
+				if ((this._totalPayment != value))
+				{
+					this.OntotalPaymentChanging(value);
+					this.SendPropertyChanging();
+					this._totalPayment = value;
+					this.SendPropertyChanged("totalPayment");
+					this.OntotalPaymentChanged();
 				}
 			}
 		}

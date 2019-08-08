@@ -22,16 +22,30 @@ namespace belajar1
             lblName.Text = Form1.name;
         }
 
-        private void BtnViewOrder_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
             Form1 login = new Form1();
             login.Show();
             this.Close();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            frmOrder order = new frmOrder();
+            order.Show();
+        }
+
+        private void BtnPayment_Click(object sender, EventArgs e)
+        {
+            FrmPayment payment = new FrmPayment();
+            payment.Show();
+        }
+
+        private void BtnChangePassword_Click(object sender, EventArgs e)
+        {
+            FrmChangePass changePassword = new FrmChangePass();
+            changePassword.Show();
         }
     }
 }

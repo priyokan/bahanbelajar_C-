@@ -33,7 +33,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnViewOrder = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -85,24 +85,26 @@
             this.btnChangePassword.TabIndex = 9;
             this.btnChangePassword.Text = "Change Password";
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.BtnChangePassword_Click);
             // 
-            // btnPayment
+            // btnViewOrder
             // 
-            this.btnPayment.Location = new System.Drawing.Point(73, 124);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(197, 44);
-            this.btnPayment.TabIndex = 8;
-            this.btnPayment.Text = "Payment";
-            this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnViewOrder.Location = new System.Drawing.Point(73, 124);
+            this.btnViewOrder.Name = "btnViewOrder";
+            this.btnViewOrder.Size = new System.Drawing.Size(197, 44);
+            this.btnViewOrder.TabIndex = 17;
+            this.btnViewOrder.Text = "View Order";
+            this.btnViewOrder.UseVisualStyleBackColor = true;
+            this.btnViewOrder.Click += new System.EventHandler(this.BtnViewOrder_Click);
             // 
             // chefMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 315);
+            this.Controls.Add(this.btnViewOrder);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnChangePassword);
-            this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -121,6 +123,6 @@
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button btnViewOrder;
     }
 }

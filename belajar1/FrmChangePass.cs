@@ -27,7 +27,11 @@ namespace belajar1
 
         private void Btnsave_Click(object sender, EventArgs e)
         {
-            if (txtnewpassword.Text == txtxconfirmpassword.Text)
+            if (txtnewpassword.Text == "" || txtoldpassword.Text == "" || txtxconfirmpassword.Text == "")
+            {
+                MessageBox.Show("password must be field");
+            }
+            else if (txtnewpassword.Text == txtxconfirmpassword.Text)
             {
                 msemployee employee = new msemployee();
                 employee = db.msemployees.Single(x => x.employeeid == Form1.ID);
@@ -42,10 +46,6 @@ namespace belajar1
                 {
                     MessageBox.Show("Wrong old password");
                 }
-            }
-            else if (txtnewpassword.Text == null || txtoldpassword.Text == null || txtxconfirmpassword == null)
-            {
-                MessageBox.Show("password must be field");
             }
             else
             {

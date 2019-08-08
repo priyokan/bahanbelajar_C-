@@ -52,5 +52,12 @@ namespace belajar1
             FrmChangePass changepassword = new FrmChangePass();
             changepassword.Show();
         }
+
+        private void BtnReport_Click(object sender, EventArgs e)
+        {
+            FrmReport report = new FrmReport();
+            report.Show();
+
+        }
     }
 }

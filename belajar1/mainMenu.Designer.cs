@@ -36,6 +36,7 @@
             this.btnManageMember = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblName
@@ -110,7 +111,7 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(97, 300);
+            this.btnLogout.Location = new System.Drawing.Point(97, 341);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(193, 35);
             this.btnLogout.TabIndex = 7;
@@ -118,11 +119,22 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(97, 300);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(193, 35);
+            this.btnReport.TabIndex = 8;
+            this.btnReport.Text = "Reporting";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.BtnReport_Click);
+            // 
             // mainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(386, 369);
+            this.ClientSize = new System.Drawing.Size(386, 411);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.btnManageMember);
@@ -149,5 +161,6 @@
         private System.Windows.Forms.Button btnManageMember;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnReport;
     }
 }

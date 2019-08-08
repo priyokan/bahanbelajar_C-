@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,27 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>belajar1DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="belajar1DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>belajar1DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="belajar1DataSet5.cs">
+      <DependentUpon>belajar1DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="belajar1DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>belajar1DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="belajar1DataSet6.cs">
+      <DependentUpon>belajar1DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="belajar1DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>belajar1DataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="cashierMenu.cs">
       <SubType>Form</SubType>
@@ -114,6 +136,30 @@
     <Compile Include="FrmManageMenu.Designer.cs">
       <DependentUpon>FrmManageMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOrder.Designer.cs">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPayment.Designer.cs">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVIewOreder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVIewOreder.Designer.cs">
+      <DependentUpon>FrmVIewOreder.cs</DependentUpon>
+    </Compile>
     <Compile Include="mainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +188,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmManageMenu.resx">
       <DependentUpon>FrmManageMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrder.resx">
+      <DependentUpon>frmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPayment.resx">
+      <DependentUpon>FrmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVIewOreder.resx">
+      <DependentUpon>FrmVIewOreder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
@@ -198,6 +256,39 @@
     </None>
     <None Include="belajar1DataSet3.xss">
       <DependentUpon>belajar1DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet4.xsc">
+      <DependentUpon>belajar1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>belajar1DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="belajar1DataSet4.xss">
+      <DependentUpon>belajar1DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet5.xsc">
+      <DependentUpon>belajar1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>belajar1DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="belajar1DataSet5.xss">
+      <DependentUpon>belajar1DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet6.xsc">
+      <DependentUpon>belajar1DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="belajar1DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>belajar1DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="belajar1DataSet6.xss">
+      <DependentUpon>belajar1DataSet6.xsd</DependentUpon>
     </None>
     <None Include="DataClasses1.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
