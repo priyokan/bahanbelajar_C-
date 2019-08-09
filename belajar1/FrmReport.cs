@@ -55,7 +55,6 @@ namespace belajar1
 
         private void ComboFrom_SelectionChangeCommitted(object sender, EventArgs e)
         {
-         
         }
         int numberMonth;
         int numberMonthTo;
@@ -74,6 +73,9 @@ namespace belajar1
 
         private void BtnGenerate_Click(object sender, EventArgs e)
         {
+            chart.Series["Income"].Points.Clear();
+            dataGrid.Rows.Clear();
+
             btnGenerate.Enabled = false;
             for (int i = numberMonth-1; i < numberMonthTo ; i++)
              {
@@ -92,7 +94,8 @@ namespace belajar1
                 {
                     total += Convert.ToInt32(bindHeadOrder.Rows[ind].Cells[7].Value);
                 }
-                dataGrid.Rows.Add(month[i], total); 
+                dataGrid.Rows.Add(month[i], total);
+                this.chart.Series["Income"].Points.AddXY(month[i], total);
              }
         }
 
@@ -101,6 +104,7 @@ namespace belajar1
             string getIndex = comboTo.Text;
             numberMonthTo = Array.IndexOf(month, getIndex) + 1;
             btnGenerate.Enabled = true;
+
         }
 
         private void FillByToolStripButton_Click(object sender, EventArgs e)

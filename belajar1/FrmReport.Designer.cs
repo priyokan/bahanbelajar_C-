@@ -43,10 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bindHeadOrder = new System.Windows.Forms.DataGridView();
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.dateToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.dateToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.orderidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,14 +53,18 @@
             this.totalPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.headerorderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.belajar1DataSet6 = new belajar1.belajar1DataSet6();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.dateToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.dateToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.headerorderTableAdapter = new belajar1.belajar1DataSet6TableAdapters.headerorderTableAdapter();
             this.belajar1DataSet5 = new belajar1.belajar1DataSet5();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindHeadOrder)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerorderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet6)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet5)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,9 +159,10 @@
             this.chart.Legends.Add(legend1);
             this.chart.Location = new System.Drawing.Point(24, 274);
             this.chart.Name = "chart";
+            this.chart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
+            series1.Name = "Income";
             this.chart.Series.Add(series1);
             this.chart.Size = new System.Drawing.Size(403, 164);
             this.chart.TabIndex = 8;
@@ -187,39 +188,6 @@
             this.bindHeadOrder.Size = new System.Drawing.Size(10, 12);
             this.bindHeadOrder.TabIndex = 9;
             this.bindHeadOrder.Visible = false;
-            // 
-            // fillByToolStrip
-            // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateToolStripLabel,
-            this.dateToolStripTextBox,
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(871, 25);
-            this.fillByToolStrip.TabIndex = 10;
-            this.fillByToolStrip.Text = "fillByToolStrip";
-            this.fillByToolStrip.Visible = false;
-            // 
-            // dateToolStripLabel
-            // 
-            this.dateToolStripLabel.Name = "dateToolStripLabel";
-            this.dateToolStripLabel.Size = new System.Drawing.Size(33, 22);
-            this.dateToolStripLabel.Text = "date:";
-            // 
-            // dateToolStripTextBox
-            // 
-            this.dateToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateToolStripTextBox.Name = "dateToolStripTextBox";
-            this.dateToolStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
             // 
             // orderidDataGridViewTextBoxColumn
             // 
@@ -280,6 +248,39 @@
             this.belajar1DataSet6.DataSetName = "belajar1DataSet6";
             this.belajar1DataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dateToolStripLabel,
+            this.dateToolStripTextBox,
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(871, 25);
+            this.fillByToolStrip.TabIndex = 10;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.fillByToolStrip.Visible = false;
+            // 
+            // dateToolStripLabel
+            // 
+            this.dateToolStripLabel.Name = "dateToolStripLabel";
+            this.dateToolStripLabel.Size = new System.Drawing.Size(33, 22);
+            this.dateToolStripLabel.Text = "date:";
+            // 
+            // dateToolStripTextBox
+            // 
+            this.dateToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateToolStripTextBox.Name = "dateToolStripTextBox";
+            this.dateToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.FillByToolStripButton_Click);
+            // 
             // headerorderTableAdapter
             // 
             this.headerorderTableAdapter.ClearBeforeFill = true;
@@ -310,10 +311,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindHeadOrder)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.headerorderBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet6)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.belajar1DataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
