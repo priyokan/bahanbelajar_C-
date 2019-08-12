@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace belajar1
 {
@@ -72,6 +73,19 @@ namespace belajar1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtEmail_Leave(object sender, EventArgs e)
+        {
+            string pattern = "^[a-z0-9][-a-z0-9._]+@([-a-z0-9]+[.])+[a-z]{2,5}$";
+            if (Regex.IsMatch(txtEmail.Text, pattern))
+            {
+                errorProvider1.Clear();
+            }
+            else
+            {
+                errorProvider1.SetError(txtEmail, "Email invalid");
+            }
         }
     }
 }

@@ -116,6 +116,7 @@ namespace belajar1
                 headerOrder.payment = "null";
                 headerOrder.cardnumber = "null";
                 headerOrder.bank = "null";
+                headerOrder.totalPayment = 0    ;
                 db.headerorders.InsertOnSubmit(headerOrder);
                 db.SubmitChanges();
                 combomember.Enabled = false;
